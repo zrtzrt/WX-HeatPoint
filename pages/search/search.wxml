@@ -1,0 +1,143 @@
+<!--search.wxml-->
+<import src="../wxSearch/wxSearch.wxml" />
+<view class="wxSearch-section">
+  <view class="wxSearch-pancel">
+    <input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" class="wxSearch-input" placeholder="搜索" />
+    <button class="wxSearch-button" bindtap="wxSearchFn" size="mini" plain="true">搜索</button>
+  </view>
+</view>
+<template is="wxSearch" data="{{wxSearchData}}" />
+
+<view class="weui-cells__title">选择日期范围</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__bd">
+      <view class="weui-label">开始时间</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="date" value="{{start}}" end="{{end}}" bindchange="bindStartChange">
+        <view class="weui-input">{{start}}</view>
+      </picker>
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__bd">
+      <view class="weui-label">结束时间</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker mode="date" value="{{end}}" start="{{start}}" bindchange="bindEndChange">
+        <view class="weui-input">{{end}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+
+<view class="weui-cells__title">选择展示地区</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_input">
+    <view class="weui-cell__bd">
+      <view class="weui-label">选择省份</view>
+    </view>
+    <view class="weui-cell__bd">
+      <picker bindchange="bindProvinceChange" value="{{provinceIndex}}" range="{{province}}">
+        <view class="weui-input">{{province[provinceIndex]}}</view>
+      </picker>
+    </view>
+  </view>
+</view>
+
+<view class="weui-cells__title">选择展示类型</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">打开所有</view>
+    <view class="weui-cell__ft">
+      <switch bindchange="switchChangeAll" />
+    </view>
+  </view>
+</view>
+
+<view class="weui-cells">
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">展会信息</view>
+    <view class="weui-cell__bd">
+      <switch checked="{{isChecked[0]}}" bindchange="switchChange0" />
+    </view>
+    <view class="weui-cell__bd">会议论坛</view>
+    <view class="weui-cell__ft">
+      <switch checked="{{isChecked[7]}}" bindchange="switchChange7" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">演唱会</view>
+    <view class="weui-cell__bd">
+      <switch checked="{{isChecked[1]}}" bindchange="switchChange1" />
+    </view>
+    <view class="weui-cell__bd">音乐会</view>
+    <view class="weui-cell__ft">
+      <switch checked="{{isChecked[2]}}" bindchange="switchChange2" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">话剧歌剧</view>
+    <view class="weui-cell__bd">
+      <switch checked="{{isChecked[3]}}" bindchange="switchChange3" />
+    </view>
+    <view class="weui-cell__bd">芭蕾舞蹈</view>
+    <view class="weui-cell__ft">
+      <switch checked="{{isChecked[4]}}" bindchange="switchChange4" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">曲艺杂坛</view>
+    <view class="weui-cell__bd">
+      <switch checked="{{isChecked[5]}}" bindchange="switchChange5" />
+    </view>
+    <view class="weui-cell__bd">体育赛事</view>
+    <view class="weui-cell__ft">
+      <switch checked="{{isChecked[6]}}" bindchange="switchChange6" />
+    </view>
+  </view>
+</view>
+
+<view class="weui-cells__title">更多功能，敬请期待···</view>
+<view class="weui-cells weui-cells_after-title">
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">航班信息</view>
+    <view class="weui-cell__bd">
+      <switch checked="{{isChecked[9]}}" bindchange="switchChange9" />
+    </view>
+    <view class="weui-cell__bd">天气预警</view>
+    <view class="weui-cell__ft">
+      <switch checked="{{isChecked[8]}}" bindchange="switchChange8" />
+    </view>
+  </view>
+  <view class="weui-cell weui-cell_switch">
+    <view class="weui-cell__bd">地震信息</view>
+    <view class="weui-cell__bd">
+      <switch checked="{{isChecked[10]}}" bindchange="switchChange10" />
+    </view>
+    <view class="weui-cell__bd">台风预警</view>
+    <view class="weui-cell__ft">
+      <switch checked="{{isChecked[11]}}" bindchange="switchChange11" />
+    </view>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd ">
+      <button type="warn" size="default" bindtap="clear"> 关闭所有 </button>
+    </view>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd">联系我们</view>
+    <view class="weui-cell__ft">
+      <contact-button/>
+    </view>
+  </view>
+  <view class="weui-cell">
+    <view class="weui-cell__bd ">
+      <button type="primary" size="default" bindtap="about"> 关于我们 </button>
+    </view>
+  </view>
+</view>
+
+<view class="weui-cells">
+</view>

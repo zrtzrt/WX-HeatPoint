@@ -1,0 +1,107 @@
+.wxSearch{
+  position: absolute;
+  top: 43px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 1px #eee solid;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index:99999
+}
+.wxSearchInner{
+  background-color: #fff;
+  z-index:99999
+}
+.wxSearch-section{
+  background-color: #fff;
+  padding: 5px 10px;
+  border: 1px #eee solid;
+  z-index:99999
+}
+.wxSearch-pancel{
+  display: flex;
+  flex-direction: row;
+  z-index:99999
+}
+.wxSearch-input{
+  flex: 8; 
+  background-color: #eee;
+  padding: 5px 10px;
+  z-index:99999
+}
+.wxSearch-button{
+  flex: 1;
+  border: none !important;
+  color: cornflowerblue !important;
+  z-index:99999
+}
+
+.wxSearchTitle{
+  display: block;
+  padding: 10px 5px 5px 10px;
+  font-size: 12px;
+  text-align: center;
+  z-index:99999
+}
+
+
+.wxSearchMindKeyItem{
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  font-size: 14px;
+  color: cornflowerblue;
+  z-index:99999
+}
+
+.wxSearchKeyList{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  z-index:99999
+}
+
+.wxSearchKeyItem{
+  flex: 0 0 20%;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #eee;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  z-index:99999
+}
+.wxSearchHistoryItem{
+  padding: 10px 5px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  z-index:99999
+}
+.wxSearchHistoryItemText{
+  flex: 8;
+  font-size: 14px;
+  z-index:99999
+}
+.wxSearchHistoryItemDel{
+  flex: 1;
+  font-size: 12px;
+  text-align: center;
+  padding: 3px 5px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  z-index:99999
+}
+.wxSearchHistoryEmpty{
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  font-size: 12px;
+  z-index:99999
+}
+.wxSearchDeleteAllBtn{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 12px;
+  z-index:99999
+}
